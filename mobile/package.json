@@ -16,6 +16,6 @@
   "dependencies": {
     "@thoughtspot/react-native-embed-sdk": "0.0.0-alpha-1",
     "@thoughtspot/rest-api-sdk": "^2.12.0",
-    "react-native-webview": "^13.12.5"
+    "react-native-webview": "13.12.5"
   }
 }
