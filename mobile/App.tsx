@@ -11,6 +11,7 @@ import {
 import { init, AuthType } from '@thoughtspot/react-native-embed-sdk';
 import { createConfiguration, ServerConfiguration, ThoughtSpotRestApi } from '@thoughtspot/rest-api-sdk';
 import { LiveboardView } from './src/LiveboardView';
+import { STYLE_VARS } from './src/utils';
 
 
 export default function App() {
@@ -39,12 +40,16 @@ export default function App() {
         authType: AuthType.TrustedAuthTokenCookieless,
         getAuthToken: async () => {
           try {
-            const data = await tsRestApiClient.getFullAccessToken({
-              username,
-              // password,
-              secret_key: secretKey,
-              validity_time_in_sec: 30000,
-            });
+            let authParams: any = {
+                username,
+                validity_time_in_sec: 30000,
+            }
+            if (password && password.trim() !== "") {
+                authParams = {...authParams, password};
+            } else {
+                authParams = {...authParams, secret_key: secretKey};
+            }
+            const data = await tsRestApiClient.getFullAccessToken(authParams);
             return data.token;
           } catch (error) {
             Alert.alert(error as string)
@@ -55,20 +60,7 @@ export default function App() {
         customizations: {
           style: {
             customCSS: {
-              variables: {
-                "--ts-var-root-background": "#fef4dd",
-                "--ts-var-root-color": "#4a4a4a",
-                "--ts-var-viz-title-color": "#8e6b23",
-                "--ts-var-viz-title-font-family": "'Georgia', 'Times New Roman', serif",
-                "--ts-var-viz-title-text-transform": "capitalize",
-                "--ts-var-viz-description-color": "#6b705c",
-                "--ts-var-viz-description-font-family": "'Verdana', 'Helvetica', sans-serif",
-                "--ts-var-viz-description-text-transform": "none",
-                "--ts-var-viz-border-radius": "6px",
-                "--ts-var-viz-box-shadow": "0 3px 6px rgba(0, 0, 0, 0.15)",
-                "--ts-var-viz-background": "#fffbf0",
-                "--ts-var-viz-legend-hover-background": "#ffe4b5",
-              },
+              variables: STYLE_VARS,
             },
           },
         }, 
