@@ -2,6 +2,11 @@
 
 **The `@thoughtspot/react-native-embed-sdk` provides a way for embedding ThoughtSpot Liveboards into your React Native applications.**
 
+#### Expo Snack
+**Click the link below to check the live working example in Expo Snack environment.**
+You can play around the code in expo.snack.
+[Expo Snack Link]()
+
 ### Quick Start
 
 #### Embedding a Liveboard
@@ -25,10 +30,6 @@ export default function App() {
   );
 }
 ```
-
-#### Expo Snack
-
-[Expo Snack Link]()
 
 #### Authentication
 
