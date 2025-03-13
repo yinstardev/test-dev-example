@@ -1,6 +1,6 @@
 ## React Native Embed SDK Example
 
-**The `@thoughtspot/react-native-embed-sdk` provides a React Native component for embedding ThoughtSpot Liveboards into your React Native applications.**
+**The `@thoughtspot/react-native-embed-sdk` provides a way for embedding ThoughtSpot Liveboards into your React Native applications.**
 
 ### Installation
 
