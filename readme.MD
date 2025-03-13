@@ -59,14 +59,6 @@ export default function App() {
 #### Additional Resources
 
 * **npm Package:** [https://www.npmjs.com/package/@thoughtspot/react-native-embed-sdk](https://www.npmjs.com/package/@thoughtspot/react-native-embed-sdk)
-* **GitHub Repository:** [https://github.com/yinstardev/react-native-embed-sdk](https://github.com/yinstardev/react-native-embed-sdk)
+* **GitHub Repository:** [https://github.com/@thoughtspot/react-native-embed-sdk](https://github.com/@thoughtspot/react-native-embed-sdk)
 * **ThoughtSpot Documentation:** [https://developers.thoughtspot.com/](https://developers.thoughtspot.com/)
 
-#### Contributing
-
-[//]: # (Documentation for Contributing will go here)
-
-#### License
-
-[//]: # (Documentation for License will go here)
-```
