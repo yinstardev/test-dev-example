@@ -32,14 +32,6 @@ export default function App() {
 }
 ```
 
-#### Authentication
-
-[//]: # (Authentication)
-
-#### Customization
-
-[//]: # (Customization)
-
 #### Additional Resources
 
 * **npm Package:** [https://www.npmjs.com/package/@thoughtspot/react-native-embed-sdk](https://www.npmjs.com/package/@thoughtspot/react-native-embed-sdk)
